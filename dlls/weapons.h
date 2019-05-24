@@ -456,6 +456,14 @@ private:
 	CWeaponRegistry& operator=( const CWeaponRegistry& );
 };
 
+/**
+*	@brief Registers a weapon
+*
+*	This will register the class like LINK_ENTITY_TO_CLASS does, but will also register it as a weapon, which ensures it is precached and available for client side prediction
+*	Use this to replace LINK_ENTITY_TO_CLASS, but only one per C++ class
+*	If a weapon has multiple names only link the one used for the HUD sprite name,
+*	which should also be the one used in Spawn() by setting pev->classname to that name
+*/
 #define LINK_WEAPON_TO_CLASS( mapClassName, DLLClassName )															\
 static CBasePlayerWeapon* __Create##mapClassName( entvars_t* pev )													\
 {																													\
