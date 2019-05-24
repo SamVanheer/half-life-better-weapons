@@ -235,7 +235,7 @@ enum crossbow_e {
 	CROSSBOW_HOLSTER2,	// empty
 };
 
-LINK_ENTITY_TO_CLASS( weapon_crossbow, CCrossbow );
+LINK_WEAPON_TO_CLASS( weapon_crossbow, CCrossbow );
 
 void CCrossbow::Spawn( )
 {

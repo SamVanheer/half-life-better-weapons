@@ -39,7 +39,7 @@ enum rpg_e {
 	RPG_FIDGET_UL,	// unloaded fidget
 };
 
-LINK_ENTITY_TO_CLASS( weapon_rpg, CRpg );
+LINK_WEAPON_TO_CLASS( weapon_rpg, CRpg );
 
 #ifndef CLIENT_DLL
 
